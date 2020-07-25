@@ -23,6 +23,15 @@ export default (props) => {
   return (
     <>
       <h1 align="center">Snips</h1>
+      <p align="center">
+        React Component snippets
+        <br />
+        <br />
+        <Link href="about">
+          <a>About</a>
+        </Link>
+      </p>
+      <hr />
       <ul>
         {links.map((linkItem, index) => {
           return (
