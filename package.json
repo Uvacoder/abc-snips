@@ -1,0 +1,20 @@
+{
+  "name": "snips",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:barelyhuman/snips.git",
+  "author": "sidgroks@gmail.com <sidgroks@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "start": "next start",
+    "build": "next build && next export"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "next": "^9.4.4",
+    "nprogress": "^0.2.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
