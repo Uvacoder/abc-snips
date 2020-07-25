@@ -6,7 +6,9 @@ function App({ Component, pageProps }) {
     <>
       <Head />
       <NProgress></NProgress>
+
       <Component {...pageProps} />
+
       <style jsx global>
         {`
           :root {
