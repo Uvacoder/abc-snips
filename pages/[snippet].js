@@ -18,15 +18,7 @@ export default (props) => {
 
   return (
     <>
-      <h3 className="title">{snippetName}</h3>
-      <Code code={code}></Code>
-      <style>
-        {`
-          .title{
-            text-transform:capitalize;
-            }
-        `}
-      </style>
+      <Code code={code} name={snippetName}></Code>
     </>
   );
 };

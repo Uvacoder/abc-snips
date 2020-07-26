@@ -1,7 +1,7 @@
 import cx from "classnames";
 
-export default ({ children, className, ...props }) => {
-  const classNames = cx("card", className);
+export default ({ children, className, hover, ...props }) => {
+  const classNames = cx("card", className, { hover });
   return (
     <>
       <div className={classNames} {...props}>
@@ -12,6 +12,13 @@ export default ({ children, className, ...props }) => {
           background: #fff;
           border: 2px solid rgba(12, 12, 13, 0.1);
           border-radius: 4px;
+          transition: 0.2s all ease;
+        }
+
+        .card.hover:hover {
+          border-color: #000;
+          background: #000;
+          color: #fff;
         }
       `}</style>
     </>

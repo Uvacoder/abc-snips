@@ -37,7 +37,7 @@ export default (props) => {
             React Component snippets
             <br />
             <br />
-            <Link href="about">
+            <Link href="/about">
               <a>About</a>
             </Link>
           </p>
@@ -48,7 +48,7 @@ export default (props) => {
                   <li key={index}>
                     <Link href={linkItem.url}>
                       <a>
-                        <Card>
+                        <Card hover>
                           <Padding all={2}>{linkItem.name}</Padding>
                         </Card>
                       </a>

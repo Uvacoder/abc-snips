@@ -21,6 +21,26 @@ function App({ Component, pageProps }) {
             font-family: var(--font);
             font-weight: 400;
           }
+
+          .flex {
+            display: flex;
+          }
+
+          .align-center {
+            align-items: center;
+          }
+
+          .justify-center {
+            justify-content: center;
+          }
+
+          .align-end {
+            align-items: flex-end;
+          }
+
+          .justify-between {
+            justify-content: space-between;
+          }
         `}
       </style>
     </>
