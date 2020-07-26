@@ -1,34 +1,25 @@
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
-
-import { MDXProvider } from "@mdx-js/react";
 
 import Code from "components/code";
-
-const components = {
-  pre: (props) => <div {...props} />,
-  code: Code,
-};
 
 export default (props) => {
   const router = useRouter();
   let snippetName;
-  let Component;
+  let code;
   if (router.query.snippet) {
     snippetName = router.query.snippet;
     const snippet = router.query.snippet.toLowerCase();
-    Component = dynamic(() => import(`../snippets/${snippet}.mdx`));
+    code = require(`../snippets/${snippet}`).default;
   }
-  if (!Component) {
+
+  if (!code) {
     return <></>;
   }
 
   return (
     <>
       <h3 className="title">{snippetName}</h3>
-      <MDXProvider components={components}>
-        <Component />
-      </MDXProvider>
+      <Code code={code}></Code>
       <style>
         {`
           .title{

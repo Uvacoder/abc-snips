@@ -1,12 +1,14 @@
-```jsx
-const Input = ({ children, ...props }) => {
+const code = ` 
+export default ({ children, ...props }) => {
   return (
     <>
-      <input {...props} />
-      <style jsx>{`
-        input {
-          background: #fff;
-          color: #000;
+      <button {...props}>
+        {children}
+      </button>
+      <style jsx>{\`
+        button {
+          background: #000;
+          color: #fff;
           border: 2px solid rgba(12,12,13,0.1);
           border-radius: 4px;
           height: 32px;
@@ -17,12 +19,16 @@ const Input = ({ children, ...props }) => {
           transition: all 0.2s ease;
         }
 
-        input:hover,input:focus {
+        button:hover{
           border-color:#000;
           outline:#000;
+          color:#000;
+          background:#fff;
         }
-      `}</style>
+      \`}</style>
     </>
   );
 };
-```
+`
+
+export default code;

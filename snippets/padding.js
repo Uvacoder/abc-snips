@@ -1,5 +1,4 @@
-
-```js
+const code = `
 export default ({ children, x, y, all, ...props }) => {
   const multiplier = 8;
 
@@ -26,14 +25,16 @@ export default ({ children, x, y, all, ...props }) => {
   return (
     <>
       <div style={style.padding}>{children}</div>
-      <style jsx>{`
+      <style jsx>{\`
         .card {
           background: #fff;
           border: 2px solid rgba(12, 12, 13, 0.1);
           border-radius: 4px;
         }
-      `}</style>
+      \`}</style>
     </>
   );
 };
-```
+`;
+
+export default code;

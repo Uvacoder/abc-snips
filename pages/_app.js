@@ -1,5 +1,6 @@
 import Head from "components/head";
 import NProgress from "components/nprogress";
+import "toastify-js/src/toastify.css";
 
 function App({ Component, pageProps }) {
   return (

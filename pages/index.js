@@ -17,6 +17,10 @@ const links = [
     name: "Padding",
     url: "padding",
   },
+  {
+    name: "Spacer",
+    url: "spacer",
+  },
 ];
 
 export default (props) => {
