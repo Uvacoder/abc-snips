@@ -1,28 +1,32 @@
-import Link from "next/link";
-import Spacer from "components/spacer";
-import Card from "components/card";
-import Padding from "components/padding";
+import Link from 'next/link';
+import Spacer from 'components/spacer';
+import Card from 'components/card';
+import Padding from 'components/padding';
 
 const links = [
   {
-    name: "Button",
-    url: "button",
+    name: 'Button',
+    url: 'button',
   },
   {
-    name: "Input",
-    url: "input",
+    name: 'Input',
+    url: 'input',
   },
   {
-    name: "Card",
-    url: "card",
+    name: 'Card',
+    url: 'card',
   },
   {
-    name: "Padding",
-    url: "padding",
+    name: 'Padding',
+    url: 'padding',
   },
   {
-    name: "Spacer",
-    url: "spacer",
+    name: 'Spacer',
+    url: 'spacer',
+  },
+  {
+    name: 'Standard | Formatter | Github Action',
+    url: 'formatter-github',
   },
 ];
 
