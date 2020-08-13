@@ -27,7 +27,7 @@ export default ({ code, name }) => {
   };
 
   const formatName = (name) => {
-    return name.replace('-', ' ');
+    return name.replace(/\-/g, ' ');
   };
 
   return (
