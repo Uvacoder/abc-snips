@@ -1,29 +1,33 @@
-import Link from "next/link";
+import Link from 'next/link';
 
-import Button from "components/button";
-import Padding from "components/padding";
-import Spacer from "components/spacer";
-import Highlight, { defaultProps } from "prism-react-renderer";
-import theme from "prism-react-renderer/themes/ultramin";
-import ToastService from "lib/toast";
+import Button from 'components/button';
+import Padding from 'components/padding';
+import Spacer from 'components/spacer';
+import Highlight, { defaultProps } from 'prism-react-renderer';
+import theme from 'prism-react-renderer/themes/ultramin';
+import ToastService from 'lib/toast';
 
 export default ({ code, name }) => {
   function handleCopyClick() {
     copyToClipboard(code);
-    ToastService.success("Copied to Clipboard");
+    ToastService.success('Copied to Clipboard');
     return;
   }
 
   const copyToClipboard = (str) => {
-    const el = document.createElement("textarea");
+    const el = document.createElement('textarea');
     el.value = str;
-    el.setAttribute("readonly", "");
-    el.style.position = "absolute";
-    el.style.left = "-9999px";
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
     document.body.appendChild(el);
     el.select();
-    document.execCommand("copy");
+    document.execCommand('copy');
     document.body.removeChild(el);
+  };
+
+  const formatName = (name) => {
+    return name.replace('-', ' ');
   };
 
   return (
@@ -32,7 +36,7 @@ export default ({ code, name }) => {
         <r-cell></r-cell>
         <r-cell>
           <h2 className="title" align="center">
-            {name}
+            {formatName(name)}
           </h2>
           <Padding all={2}>
             <div className="flex align-end justify-between">
@@ -53,7 +57,7 @@ export default ({ code, name }) => {
               {({ className, style, tokens, getLineProps, getTokenProps }) => (
                 <pre
                   className={className}
-                  style={{ ...style, borderRadius: "4px", padding: "10px" }}
+                  style={{ ...style, borderRadius: '4px', padding: '10px' }}
                 >
                   {tokens.map((line, i) => (
                     <div key={i} {...getLineProps({ line, key: i })}>

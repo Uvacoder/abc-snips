@@ -26,7 +26,7 @@ const links = [
   },
   {
     name: 'Standard | Formatter | Github Action',
-    url: 'formatter-github',
+    url: 'formatter-github-action',
   },
 ];
 
