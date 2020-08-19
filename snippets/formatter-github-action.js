@@ -22,7 +22,7 @@ jobs:
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4.1.2
         with:
-          commit_message: 🤖 Formatted!
+          commit_message: ":robot: Formatted!"
           branch: \${{ github.head_ref }}
 `;
 
