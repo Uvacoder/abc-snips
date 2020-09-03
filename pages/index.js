@@ -1,51 +1,55 @@
-import Link from 'next/link';
-import Spacer from 'components/spacer';
-import Card from 'components/card';
-import Padding from 'components/padding';
+import Link from 'next/link'
+import Spacer from 'components/spacer'
+import Card from 'components/card'
+import Padding from 'components/padding'
 
 const links = [
   {
     name: 'Button',
-    url: 'button',
+    url: 'button'
   },
   {
     name: 'Input',
-    url: 'input',
+    url: 'input'
   },
   {
     name: 'Card',
-    url: 'card',
+    url: 'card'
   },
   {
     name: 'Padding',
-    url: 'padding',
+    url: 'padding'
   },
   {
     name: 'Spacer',
-    url: 'spacer',
+    url: 'spacer'
   },
   {
     name: 'Standard | Formatter | Github Action',
-    url: 'formatter-github-action',
+    url: 'formatter-github-action'
   },
-];
+  {
+    name: 'Release | Packager | Github Action',
+    url: 'packager-and-releaser'
+  }
+]
 
 export default (props) => {
   return (
     <>
-      <r-grid columns="3">
-        <r-cell></r-cell>
+      <r-grid columns='3'>
+        <r-cell />
         <r-cell>
-          <h1 align="center">Snips</h1>
-          <p align="center">
-            React Component snippets
+          <h1 align='center'>Snips</h1>
+          <p align='center'>
+            Code Snippets
             <br />
             <br />
-            <Link href="/about">
+            <Link href='/about'>
               <a>About</a>
             </Link>
           </p>
-          <ul className="snippet-links">
+          <ul className='snippet-links'>
             {links.map((linkItem, index) => {
               return (
                 <>
@@ -60,11 +64,11 @@ export default (props) => {
                   </li>
                   <Spacer y={2} />
                 </>
-              );
+              )
             })}
           </ul>
         </r-cell>
-        <r-cell></r-cell>
+        <r-cell />
       </r-grid>
       <style jsx>
         {`
@@ -88,5 +92,5 @@ export default (props) => {
         `}
       </style>
     </>
-  );
-};
+  )
+}
