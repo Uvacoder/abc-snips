@@ -31,6 +31,10 @@ const links = [
   {
     name: 'Release | Packager | Github Action',
     url: 'packager-and-releaser'
+  },
+  {
+    name: 'Javascript | Unique Array from Array with Objects',
+    url: 'javascript-unique-array'
   }
 ]
 
