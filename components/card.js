@@ -11,7 +11,7 @@ export default ({ children, className, hover, ...props }) => {
         .card {
           background: #fff;
           border: 2px solid rgba(12, 12, 13, 0.1);
-          border-radius: 4px;
+          border-radius: 8px;
           transition: 0.2s all ease;
         }
 
