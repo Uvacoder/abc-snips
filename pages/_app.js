@@ -1,13 +1,13 @@
-import Head from "components/head";
-import NProgress from "components/nprogress";
-import "toastify-js/src/toastify.css";
-import "assets/raster2.css";
+import Head from 'components/head'
+import NProgress from 'components/nprogress'
+import 'toastify-js/src/toastify.css'
+import 'assets/raster2.css'
 
-function App({ Component, pageProps }) {
+function App ({ Component, pageProps }) {
   return (
     <>
       <Head />
-      <NProgress></NProgress>
+      <NProgress />
 
       <Component {...pageProps} />
 
@@ -44,7 +44,7 @@ function App({ Component, pageProps }) {
         `}
       </style>
     </>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,10 +1,10 @@
-import Link from "next/link";
+import Link from 'next/link'
 
-export default () => {
+const HomeLink = () => {
   return (
     <>
-      <Link href="/">
-        <a className="link">Home</a>
+      <Link href='/'>
+        <a className='link'>Home</a>
       </Link>
       <style jsx>
         {`
@@ -14,5 +14,7 @@ export default () => {
         `}
       </style>
     </>
-  );
-};
+  )
+}
+
+export default HomeLink

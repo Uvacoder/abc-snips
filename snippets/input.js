@@ -25,6 +25,6 @@ const Input = ({ children, ...props }) => {
     </>
   );
 };
-`;
+`
 
-export default code;
+export default code

@@ -1,22 +1,22 @@
-import Router from "next/router";
-import NProgress from "nprogress";
+import Router from 'next/router'
+import NProgress from 'nprogress'
 
-let timeout;
+let timeout
 
 export const start = () => {
-  timeout = setTimeout(NProgress.start, 100);
-};
+  timeout = setTimeout(NProgress.start, 100)
+}
 
 export const done = () => {
-  clearTimeout(timeout);
-  NProgress.done();
-};
+  clearTimeout(timeout)
+  NProgress.done()
+}
 
-Router.events.on("routeChangeStart", start);
-Router.events.on("routeChangeComplete", done);
-Router.events.on("routeChangeError", done);
+Router.events.on('routeChangeStart', start)
+Router.events.on('routeChangeComplete', done)
+Router.events.on('routeChangeError', done)
 
-export default () => (
+const Progress = () => (
   <style jsx global>
     {`
       #nprogress {
@@ -48,4 +48,6 @@ export default () => (
       }
     `}
   </style>
-);
+)
+
+export default Progress

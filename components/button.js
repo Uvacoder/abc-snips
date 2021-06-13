@@ -1,4 +1,4 @@
-export default ({ children, ...props }) => {
+const Button = ({ children, ...props }) => {
   return (
     <>
       <button {...props}>{children}</button>
@@ -22,7 +22,10 @@ export default ({ children, ...props }) => {
           color: #000;
           background: #fff;
         }
-      `}</style>
+      `}
+      </style>
     </>
-  );
-};
+  )
+}
+
+export default Button

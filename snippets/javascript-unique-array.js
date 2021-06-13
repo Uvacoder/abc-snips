@@ -7,6 +7,6 @@ sourceArray.reduce((acc,item)=>{
         
     return acc;
 },new Set());
-`;
+`
 
-export default code;
+export default code

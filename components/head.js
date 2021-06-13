@@ -1,16 +1,18 @@
-import Head from "next/head";
+import NextHead from 'next/head'
 
-export default (props) => {
+const Head = (props) => {
   return (
     <>
-      <Head>
+      <NextHead>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-          rel="stylesheet"
-        ></link>
+          href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap'
+          rel='stylesheet'
+        />
 
         <title>Snips</title>
-      </Head>
+      </NextHead>
     </>
-  );
-};
+  )
+}
+
+export default Head

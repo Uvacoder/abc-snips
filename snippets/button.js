@@ -31,4 +31,4 @@ export default ({ children, ...props }) => {
 };
 `
 
-export default code;
+export default code

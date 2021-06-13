@@ -16,6 +16,6 @@ const code = `export default function Spacer(props) {
     }
   
     return <div style={style}>{props.children}</div>;
-  }`;
+  }`
 
-export default code;
+export default code

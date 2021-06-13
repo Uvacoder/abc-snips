@@ -1,44 +1,11 @@
+import React from 'react'
 import Link from 'next/link'
 import Spacer from 'components/spacer'
 import Card from 'components/card'
 import Padding from 'components/padding'
+import { links } from '../lib/links'
 
-const links = [
-  {
-    name: 'Button',
-    url: 'button'
-  },
-  {
-    name: 'Input',
-    url: 'input'
-  },
-  {
-    name: 'Card',
-    url: 'card'
-  },
-  {
-    name: 'Padding',
-    url: 'padding'
-  },
-  {
-    name: 'Spacer',
-    url: 'spacer'
-  },
-  {
-    name: 'Standard | Formatter | Github Action',
-    url: 'formatter-github-action'
-  },
-  {
-    name: 'Release | Packager | Github Action',
-    url: 'packager-and-releaser'
-  },
-  {
-    name: 'Javascript | Unique Array from Array with Objects',
-    url: 'javascript-unique-array'
-  }
-]
-
-export default (props) => {
+const Home = (props) => {
   return (
     <>
       <r-grid columns='3'>
@@ -56,8 +23,8 @@ export default (props) => {
           <ul className='snippet-links'>
             {links.map((linkItem, index) => {
               return (
-                <>
-                  <li key={index}>
+                <React.Fragment key={index}>
+                  <li>
                     <Link href={linkItem.url}>
                       <a>
                         <Card hover>
@@ -67,7 +34,7 @@ export default (props) => {
                     </Link>
                   </li>
                   <Spacer y={2} />
-                </>
+                </React.Fragment>
               )
             })}
           </ul>
@@ -98,3 +65,5 @@ export default (props) => {
     </>
   )
 }
+
+export default Home

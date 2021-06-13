@@ -1,10 +1,10 @@
-import HomeLink from "components/home-link";
+import HomeLink from 'components/home-link'
 
-export default () => {
+const About = () => {
   return (
     <>
-      <r-grid columns="3">
-        <r-cell></r-cell>
+      <r-grid columns='3'>
+        <r-cell />
         <r-cell>
           <HomeLink />
           <h2>About Snips</h2>
@@ -17,8 +17,10 @@ export default () => {
             install.
           </p>
         </r-cell>
-        <r-cell></r-cell>
+        <r-cell />
       </r-grid>
     </>
-  );
-};
+  )
+}
+
+export default About

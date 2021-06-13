@@ -16,6 +16,6 @@ export default ({ children, className,...props }) => {
     </>
   );
 };
-`;
+`
 
-export default code;
+export default code

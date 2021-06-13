@@ -24,6 +24,6 @@ jobs:
         with:
           commit_message: ":robot: Formatted!"
           branch: \${{ github.head_ref }}
-`;
+`
 
-export default code;
+export default code

@@ -8,15 +8,20 @@
   "scripts": {
     "dev": "next",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "fix": "wrap -f"
   },
   "dependencies": {
-    "classnames": "^2.2.6",
-    "next": "^10.0.6",
+    "classnames": "^2.3.1",
+    "next": "^10.2.3",
     "nprogress": "^0.2.0",
-    "prism-react-renderer": "^1.1.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "toastify-js": "^1.9.3"
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "toastify-js": "^1.11.0"
+  },
+  "devDependencies": {
+    "@barelyhuman/wrap": "^0.0.6",
+    "standard": "^16.0.3"
   }
 }
