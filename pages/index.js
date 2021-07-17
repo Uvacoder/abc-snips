@@ -8,39 +8,42 @@ import { getSnippets } from "lib/get-snippets";
 const Home = ({ links, ...props }) => {
   return (
     <>
-      <r-grid columns="3">
-        <r-cell />
-        <r-cell>
-          <h1 align="center">Snips</h1>
-          <p align="center">
-            Code Snippets
-            <br />
-            <br />
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </p>
-          <ul className="snippet-links">
-            {links.map((linkItem, index) => {
-              return (
-                <React.Fragment key={index}>
-                  <li>
-                    <Link href={linkItem.url}>
-                      <a>
-                        <Card hover>
-                          <Padding all={2}>{linkItem.title}</Padding>
-                        </Card>
-                      </a>
-                    </Link>
-                  </li>
-                  <Spacer y={2} />
-                </React.Fragment>
-              );
-            })}
-          </ul>
-        </r-cell>
-        <r-cell />
-      </r-grid>
+      <section className="container-boundaries">
+        <h1>Snips</h1>
+        <p>
+          Code Snippets
+          <br />
+          <br />
+          <Link href="/about">
+            <a>About</a>
+          </Link>
+        </p>
+      </section>
+
+      <section className="container-boundaries">
+        <ul className="snippet-links">
+          {links.map((linkItem, index) => {
+            return (
+              <React.Fragment key={index}>
+                <li>
+                  <Link href={linkItem.url}>
+                    <a>
+                      <Card hover>
+                        <div className="flex align-center">
+                          {linkItem.title}
+                        </div>
+                      </Card>
+                      <Spacer y={2} />
+                    </a>
+                  </Link>
+                </li>
+                <Spacer y={2} />
+              </React.Fragment>
+            );
+          })}
+        </ul>
+      </section>
+
       <style jsx>
         {`
           .snippet-links {
@@ -48,6 +51,8 @@ const Home = ({ links, ...props }) => {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding: 0px;
+            margin: 0px;
           }
 
           .snippet-links li {

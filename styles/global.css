@@ -33,3 +33,13 @@ p {
   font-size: 14px;
   line-height: 25.2px;
 }
+
+.w-100 {
+  width: 100%;
+}
+
+.container-boundaries {
+  max-width: 900px;
+  padding: 16px;
+  margin: 0 auto;
+}

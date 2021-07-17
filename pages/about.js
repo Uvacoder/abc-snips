@@ -16,6 +16,10 @@ const About = () => {
             it easy to customize and faster than waiting for the dependencies to
             install.
           </p>
+          <p>
+            You can always raise requests for more such useful snippets at the{" "}
+            <a href="https://github.com/barelyhuman/snips">github repository</a>
+          </p>
         </r-cell>
         <r-cell />
       </r-grid>

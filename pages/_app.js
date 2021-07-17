@@ -9,7 +9,6 @@ function App({ Component, pageProps }) {
     <>
       <Head />
       <NProgress />
-
       <Component {...pageProps} />
     </>
   );
