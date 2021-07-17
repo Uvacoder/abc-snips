@@ -29,6 +29,11 @@ export default ({ children, ...props }) => {
     </>
   );
 };
-`
+`;
 
-export default code
+const snippet = {
+  title: "React Component | Button",
+  code,
+};
+
+export default snippet;

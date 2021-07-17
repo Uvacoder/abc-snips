@@ -1,0 +1,35 @@
+@import url("//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css");
+
+:root {
+  --font: "Inter", sans-serif;
+}
+
+body {
+  font-family: var(--font);
+  font-weight: 400;
+}
+
+.flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+p {
+  font-size: 14px;
+  line-height: 25.2px;
+}

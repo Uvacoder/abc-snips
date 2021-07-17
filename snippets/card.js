@@ -16,6 +16,11 @@ export default ({ children, className,...props }) => {
     </>
   );
 };
-`
+`;
 
-export default code
+const snippet = {
+  title: "React Component | Card ",
+  code,
+};
+
+export default snippet;

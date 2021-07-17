@@ -25,6 +25,11 @@ const Input = ({ children, ...props }) => {
     </>
   );
 };
-`
+`;
 
-export default code
+const snippet = {
+  title: "React Component | Input",
+  code,
+};
+
+export default snippet;

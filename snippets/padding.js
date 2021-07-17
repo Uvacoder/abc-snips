@@ -35,6 +35,11 @@ export default ({ children, x, y, all, ...props }) => {
     </>
   );
 };
-`
+`;
 
-export default code
+const snippet = {
+  title: "React Component | Padding ",
+  code,
+};
+
+export default snippet;

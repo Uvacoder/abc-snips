@@ -153,4 +153,7 @@ function printRange(range) {
 }
 `;
 
-export default code;
+export default {
+  title: "Algorithm | Availability Ranges",
+  code: code,
+};

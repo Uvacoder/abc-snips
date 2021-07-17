@@ -31,6 +31,11 @@ jobs:
           prerelease: true
         env:
           GITHUB_TOKEN: \${{ secrets.GITHUB_TOKEN }}
-`
+`;
 
-export default code
+const snippet = {
+  title: "Github Action | Release and Packager",
+  code,
+};
+
+export default snippet;

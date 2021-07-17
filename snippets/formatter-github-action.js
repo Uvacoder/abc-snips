@@ -24,6 +24,11 @@ jobs:
         with:
           commit_message: ":robot: Formatted!"
           branch: \${{ github.head_ref }}
-`
+`;
 
-export default code
+const snippet = {
+  title: "Github Action | Formatter",
+  code,
+};
+
+export default snippet;

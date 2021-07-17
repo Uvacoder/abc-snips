@@ -7,6 +7,11 @@ sourceArray.reduce((acc,item)=>{
         
     return acc;
 },new Set());
-`
+`;
 
-export default code
+const snippet = {
+  title: "Javascript Logic | Unique Array using Sets ",
+  code,
+};
+
+export default snippet;

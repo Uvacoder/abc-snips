@@ -1,45 +1,45 @@
-import Link from 'next/link'
-import Button from 'components/button'
-import Padding from 'components/padding'
-import Spacer from 'components/spacer'
-import Highlight, { defaultProps } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/ultramin'
-import ToastService from 'lib/toast'
+import Link from "next/link";
+import Button from "components/button";
+import Padding from "components/padding";
+import Spacer from "components/spacer";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/ultramin";
+import ToastService from "lib/toast";
 
 const Code = ({ code, name }) => {
-  function handleCopyClick () {
-    copyToClipboard(code)
-    ToastService.success('Copied to Clipboard')
+  function handleCopyClick() {
+    copyToClipboard(code);
+    ToastService.success("Copied to Clipboard");
   }
 
   const copyToClipboard = (str) => {
-    const el = document.createElement('textarea')
-    el.value = str
-    el.setAttribute('readonly', '')
-    el.style.position = 'absolute'
-    el.style.left = '-9999px'
-    document.body.appendChild(el)
-    el.select()
-    document.execCommand('copy')
-    document.body.removeChild(el)
-  }
+    const el = document.createElement("textarea");
+    el.value = str;
+    el.setAttribute("readonly", "");
+    el.style.position = "absolute";
+    el.style.left = "-9999px";
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+  };
 
   const formatName = (name) => {
-    return name.replace(/-/g, ' ')
-  }
+    return name.replace(/-/g, " ");
+  };
 
   return (
     <>
-      <r-grid columns='3'>
+      <r-grid columns="3">
         <r-cell />
         <r-cell>
-          <h2 className='title' align='center'>
+          <h2 className="title" align="center">
             {formatName(name)}
           </h2>
           <Padding all={2}>
-            <div className='flex align-end justify-between'>
-              <Link href='/'>
-                <a className='link-button' href=''>
+            <div className="flex align-end justify-between">
+              <Link href="/">
+                <a className="link-button" href="">
                   Home
                 </a>
               </Link>
@@ -50,12 +50,19 @@ const Code = ({ code, name }) => {
               {...defaultProps}
               theme={theme}
               code={code}
-              language='javascript'
+              language="javascript"
             >
               {({ className, style, tokens, getLineProps, getTokenProps }) => (
                 <pre
                   className={className}
-                  style={{ ...style, borderRadius: '4px', padding: '10px' }}
+                  style={{
+                    ...style,
+                    borderRadius: "4px",
+                    padding: "10px",
+                    fontFamily: "Hack",
+                    fontSize: "14px",
+                    lineHeight: "25.2px",
+                  }}
                 >
                   {tokens.map((line, i) => (
                     <div key={i} {...getLineProps({ line, key: i })}>
@@ -73,18 +80,18 @@ const Code = ({ code, name }) => {
       </r-grid>
       <style jsx>
         {`
-.link-button {
-width: auto;
-font-size: 16px;
-}
+          .link-button {
+            width: auto;
+            font-size: 16px;
+          }
 
-.title {
-text-transform: capitalize;
-}
-`}
+          .title {
+            text-transform: capitalize;
+          }
+        `}
       </style>
     </>
-  )
-}
+  );
+};
 
-export default Code
+export default Code;

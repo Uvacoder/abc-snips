@@ -1,9 +1,9 @@
-import HomeLink from 'components/home-link'
+import HomeLink from "components/home-link";
 
 const About = () => {
   return (
     <>
-      <r-grid columns='3'>
+      <r-grid columns="3">
         <r-cell />
         <r-cell>
           <HomeLink />
@@ -20,7 +20,7 @@ const About = () => {
         <r-cell />
       </r-grid>
     </>
-  )
-}
+  );
+};
 
-export default About
+export default About;

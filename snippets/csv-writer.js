@@ -19,4 +19,9 @@ function CSVWriter() {
 }
 `;
 
-export default code;
+const snippet = {
+  title: "Javascript Logic | CSV Writer",
+  code,
+};
+
+export default snippet;

@@ -21,6 +21,11 @@ else
   echo "Error occurred: \${RESULT}"
 fi
 
-`
+`;
 
-export default code
+const snippet = {
+  title: "React Native/Bash Script | Version Sync ",
+  code,
+};
+
+export default snippet;
