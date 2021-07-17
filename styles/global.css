@@ -2,13 +2,23 @@
 
 :root {
   --font: "Inter", sans-serif;
+  --blue: #1871e9;
 }
 
 body {
   font-family: var(--font);
   font-weight: 400;
 }
-
+a {
+  text-decoration: underline;
+  -webkit-text-decoration: underline rgba(0, 0, 0, 0.3);
+  text-decoration: underline rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  color: inherit;
+}
+a:hover {
+  color: var(--blue);
+}
 .flex {
   display: flex;
 }

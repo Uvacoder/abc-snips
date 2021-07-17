@@ -11,12 +11,13 @@ const Home = ({ links, ...props }) => {
       <section className="container-boundaries">
         <h1>Snips</h1>
         <p>
-          Code Snippets
+          Reusable Code Snippets
           <br />
           <br />
           <Link href="/about">
             <a>About</a>
           </Link>
+          <hr />
         </p>
       </section>
 

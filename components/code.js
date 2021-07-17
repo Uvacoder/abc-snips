@@ -30,54 +30,50 @@ const Code = ({ code, name }) => {
 
   return (
     <>
-      <r-grid columns="3">
-        <r-cell />
-        <r-cell>
-          <h2 className="title" align="center">
-            {formatName(name)}
-          </h2>
-          <Padding all={2}>
-            <div className="flex align-end justify-between">
-              <Link href="/">
-                <a className="link-button" href="">
-                  Home
-                </a>
-              </Link>
-              <Spacer x={1} inline />
-              <Button onClick={handleCopyClick}>Copy</Button>
-            </div>
-            <Highlight
-              {...defaultProps}
-              theme={theme}
-              code={code}
-              language="javascript"
-            >
-              {({ className, style, tokens, getLineProps, getTokenProps }) => (
-                <pre
-                  className={className}
-                  style={{
-                    ...style,
-                    borderRadius: "4px",
-                    padding: "10px",
-                    fontFamily: "Hack",
-                    fontSize: "14px",
-                    lineHeight: "25.2px",
-                  }}
-                >
-                  {tokens.map((line, i) => (
-                    <div key={i} {...getLineProps({ line, key: i })}>
-                      {line.map((token, key) => (
-                        <span key={key} {...getTokenProps({ token, key })} />
-                      ))}
-                    </div>
-                  ))}
-                </pre>
-              )}
-            </Highlight>
-          </Padding>
-        </r-cell>
-        <r-cell />
-      </r-grid>
+      <section className="container-boundaries">
+        <h2 className="title" align="center">
+          {formatName(name)}
+        </h2>
+        <Padding all={2}>
+          <div className="flex align-end justify-between">
+            <Link href="/">
+              <a className="link-button" href="">
+                Home
+              </a>
+            </Link>
+            <Spacer x={1} inline />
+            <Button onClick={handleCopyClick}>Copy</Button>
+          </div>
+          <Highlight
+            {...defaultProps}
+            theme={theme}
+            code={code}
+            language="javascript"
+          >
+            {({ className, style, tokens, getLineProps, getTokenProps }) => (
+              <pre
+                className={className}
+                style={{
+                  ...style,
+                  borderRadius: "4px",
+                  padding: "10px",
+                  fontFamily: "Hack",
+                  fontSize: "14px",
+                  lineHeight: "25.2px",
+                }}
+              >
+                {tokens.map((line, i) => (
+                  <div key={i} {...getLineProps({ line, key: i })}>
+                    {line.map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })} />
+                    ))}
+                  </div>
+                ))}
+              </pre>
+            )}
+          </Highlight>
+        </Padding>
+      </section>
       <style jsx>
         {`
           .link-button {
