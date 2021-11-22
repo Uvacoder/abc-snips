@@ -9,7 +9,7 @@ const Home = ({ links, ...props }) => {
   return (
     <>
       <section className="container-boundaries">
-        <h1>Snips</h1>
+        <h1>abc Snips</h1>
         <p>
           Reusable Code Snippets
           <br />
