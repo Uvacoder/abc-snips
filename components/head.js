@@ -9,7 +9,7 @@ const Head = (props) => {
           rel='stylesheet'
         />
 
-        <title>Snips</title>
+        <title>Snip Snips</title>
       </NextHead>
     </>
   )
