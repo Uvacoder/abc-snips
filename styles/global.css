@@ -1,4 +1,6 @@
 @import url("//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css");
+@import url("https://unpkg.com/highlight.js@11.5.1/styles/base16/nord.css");
+@import url("https://fonts.googleapis.com/css?family=Inter:400,500");
 
 :root {
   --font: "Inter", sans-serif;
